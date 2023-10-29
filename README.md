@@ -1,5 +1,7 @@
 # NLP Kaggle Challenge: Disaster Tweets
-
+## Introduction
+This is a repository for the Kaggle Challenge in "Natural Language Processing with Disaster Tweets". It consists of the prediction if the tweet mentions a real disaster or not.
+Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 ## Experiment ideas
 - Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt)
 - Use multiple features (not only the tweets text) as the keyword or the location of the tweet. Encode the keyword and the text separately and train a MLP. Dropout one or none of the two inputs (keyword and text) randomly.
