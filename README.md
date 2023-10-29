@@ -1,4 +1,11 @@
 # NLP Kaggle Challenge: Disaster Tweets
+
+## Experiment ideas
+- Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt)
+- Use multiple features (not only the tweets text) as the keyword or the location of the tweet. Encode the keyword and the text separately and train a MLP. Dropout one or none of the two inputs (keyword and text) randomly.
+- Make an ensemble of methods for improving results.
+- Apply data augmentation for more variety.
+  
 ## Results over validation set
 | Experiment    | F1-Score | Precission | Recall
 | ------------- | ------------- | ------------- | -------------
