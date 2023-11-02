@@ -6,9 +6,9 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 - Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt)
 - Use multiple features (not only the tweets text) as the keyword or the location of the tweet. Encode the keyword and the text separately and train a MLP. Dropout one or none of the two inputs (keyword and text) randomly.
 - Make an ensemble of methods for improving results.
-- Apply data augmentation for more variety.
+
   
-## Results over validation set
+## Results over ~10% validation set (from the training set)
 | Experiment    | F1-Score | Precission | Recall
 | ------------- | ------------- | ------------- | -------------
 | Pretrained BERT + SVM with 768 components | 7.8% | 86.7% | 4.1% 
@@ -17,12 +17,18 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 | Pretrained BERT + PCA (64 components) + SVM  | 61.5%  | 68% | 56.2%
 | Pretrained BERT + Random Forests | 61.4% | 69% | 55.2%
 | Pretrained Bert + Attention Mask + Random forests | 69.2% | 75.6% | 63.8%
+| Pretrained Bert + SMOTE | 71.29%		| 74.23%	| 68.57%
+| Pretrained Bert cased + SMOTE | 71.2%		| 70.98%	| 71.43%
+| Pretrained Bert + SMOTE + Random forests + Data augmentation | - | - | -
+| Pretrained Bert + UnderSampling | 69.92%		| 69.38%	| 70.48%
+| Pretrained Bert + SMOTE + KNNClassifier | 66.56%		| 60.51%	| 73.96%
 
 **IN PROGRESS**
 
 ## Kaggle results
-**IN PROGRESS**
-
+| Experiment    | F1-Score 
+| ------------- | ------------- |
+| Pretrained Bert cased + SMOTE + Data augmentation (NLPAug) + Random Forests | 0.74655 |
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
 - Finetune transformers: https://huggingface.co/transformers/v4.2.2/custom_datasets.html
