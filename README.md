@@ -24,7 +24,7 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 | Pretrained Bert + UnderSampling | 69.92%		| 69.38%	| 70.48%
 | Pretrained Bert + SMOTE + KNNClassifier | 66.56%		| 60.51%	| 73.96%
 | Pretrained Bert + extra keywords features | 69.21%		| 77.91%	| 62.25%
-
+| Pretrained Bert + extra keywords features + MLP | 72.82%		| 78.86%	| 67.65%
 **IN PROGRESS**
 
 ## Kaggle results
@@ -32,6 +32,8 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 | ------------- | ------------- |
 | Pretrained Bert cased + SMOTE + Data augmentation (NLPAug) + Random Forests | 0.74655 |
 | Pretrained Bert + extra keywords features | 0.77719 |
+| Pretrained Bert + extra keywords features + MLP | 0.78761 | 
+
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
 - Finetune transformers: https://huggingface.co/transformers/v4.2.2/custom_datasets.html
