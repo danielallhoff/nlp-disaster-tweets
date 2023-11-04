@@ -13,7 +13,7 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 - Finetune BERT with multiple features (text and keyword).
 
 ## ChatGPT Prompts
-Its is possible to use ChatGPT as a NLP classifier and work well on this task. Due to performance constrains, its is needed to test the prompts on an small validation set for making a final validation on the full testing set. Some prompts have been test on the whole testing set. However, as stated it is not feasible.
+Its is possible to use ChatGPT as a NLP classifier and work well on this task. Due to performance constrains, its is needed to test the prompts on a small validation set for making a final validation on the full testing set. Some prompts have been tested on the whole testing set. However, as stated, it is not feasible for testing multiple prompts.
 ### Initial few shot learning prompt:
 ```
 You are a tweet analyst in order to monitor possible emergencies is posted online like fire, car or airplane accidents, earthquakes, tsunamis, homicides, bombing,
