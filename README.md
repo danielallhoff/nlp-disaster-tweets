@@ -39,6 +39,7 @@ You are a tweet analyst in order to monitor possible emergencies is posted onlin
 | Pretrained Bert + extra keywords features | 0.77719 |
 | Pretrained Bert + extra keywords features + MLP | 0.78761 | 
 | Initial few shot learning prompt Chat GPT | 0.74624 |
+| Finetuned BERT | 0.82653 |
 
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
