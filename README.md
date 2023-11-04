@@ -1,12 +1,16 @@
 # NLP Kaggle Challenge: Disaster Tweets
 ## Introduction
 This is a repository for the Kaggle Challenge in "Natural Language Processing with Disaster Tweets". It consists of the prediction if the tweet mentions a real disaster or not.
+
 Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
+
 ## Experiment ideas
 - Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt)
 - Use multiple features (not only the tweets text) as the keyword or the location of the tweet. Encode the keyword and the text separately and train a MLP. Dropout one or none of the two inputs (keyword and text) randomly. :white_check_mark:
 - Make an ensemble of methods for improving results.
 - Apply data augmentation to text with NLPAug. :white_check_mark:
+- Experiment with XGBoost.
+- Finetune BERT with multiple features (text and keyword).
 
 ## ChatGPT Prompts
 ### Initial few shot learning prompt:
@@ -14,7 +18,7 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 You are a tweet analyst in order to monitor possible emergencies is posted online like fire, car or airplane accidents, earthquakes, tsunamis, homicides, bombing,    war, storm damage....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening. ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster) OR 0 (if not)!!!!!. DO NOT ANSWER WITH MORE THAN ONE INT VALUE!!!!   TEXT: On plus side LOOK AT THE SKY LAST NIGHT IT WAS ABLAZE.   DISASTER: 0.   TEXT: Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all.   DISASTER:1.   TEXT: I'm on top of the hill and I can see a fire in the woods...   DISASTER: 1   TEXT: Jays rocking #MLB @JoeyBats19 just bombed one out of Rogers Centre. Play-offs r ahead for The #BlueJays - Bell Moseby and Barfield r back! DISASTER: 0   TEXT: {query}   DISASTER: 
 ```
   
-## Results over ~10% validation set (from the training set)
+## Initial test results over ~10% validation set (from the training set)
 | Experiment    | F1-Score | Precission | Recall
 | ------------- | ------------- | ------------- | -------------
 | Pretrained BERT + SVM with 768 components | 7.8% | 86.7% | 4.1% 
@@ -25,7 +29,6 @@ You are a tweet analyst in order to monitor possible emergencies is posted onlin
 | Pretrained Bert + Attention Mask + Random forests | 69.2% | 75.6% | 63.8%
 | Pretrained Bert + SMOTE | 71.29%		| 74.23%	| 68.57%
 | Pretrained Bert cased + SMOTE | 71.2%		| 70.98%	| 71.43%
-| Pretrained Bert + SMOTE + Random forests + Data augmentation | - | - | -
 | Pretrained Bert + UnderSampling | 69.92%		| 69.38%	| 70.48%
 | Pretrained Bert + SMOTE + KNNClassifier | 66.56%		| 60.51%	| 73.96%
 | Pretrained Bert + extra keywords features | 69.21%		| 77.91%	| 62.25%
