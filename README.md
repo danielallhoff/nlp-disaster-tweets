@@ -33,7 +33,7 @@ DISASTER:
 
 ### Basic classification prompt without few shot learning:
 ```
-You are a tweet analyst in order to monitor possible emergencies is posted online like accidents (car accidents, airplane accidents, train wrecks or any type of accident),
+You are a tweet analyst in order to monitor possible emergencies posted online like accidents (car accidents, airplane accidents, train wrecks or any type of accident),
 natural disasters (for example: earthquakes, typhoon, tsunamis, storm damage, fire...etc), crimes (like homicides, killings, bombing, terrorism, casualties),
 war, scandals....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening.
 ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster or emergency) OR 0 (if not)!!!!!.
