@@ -13,11 +13,35 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 - Finetune BERT with multiple features (text and keyword).
 
 ## ChatGPT Prompts
+Its is possible to use ChatGPT as a NLP classifier and work well on this task. Due to performance constrains, its is needed to test the prompts on an small validation set for making a final validation on the full testing set. Some prompts have been test on the whole testing set. However, as stated it is not feasible.
 ### Initial few shot learning prompt:
 ```
-You are a tweet analyst in order to monitor possible emergencies is posted online like fire, car or airplane accidents, earthquakes, tsunamis, homicides, bombing,    war, storm damage....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening. ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster) OR 0 (if not)!!!!!. DO NOT ANSWER WITH MORE THAN ONE INT VALUE!!!!   TEXT: On plus side LOOK AT THE SKY LAST NIGHT IT WAS ABLAZE.   DISASTER: 0.   TEXT: Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all.   DISASTER:1.   TEXT: I'm on top of the hill and I can see a fire in the woods...   DISASTER: 1   TEXT: Jays rocking #MLB @JoeyBats19 just bombed one out of Rogers Centre. Play-offs r ahead for The #BlueJays - Bell Moseby and Barfield r back! DISASTER: 0   TEXT: {query}   DISASTER: 
+You are a tweet analyst in order to monitor possible emergencies is posted online like fire, car or airplane accidents, earthquakes, tsunamis, homicides, bombing,
+war, storm damage....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening.
+ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster) OR 0 (if not)!!!!!. DO NOT ANSWER WITH MORE THAN ONE INT VALUE!!!!
+TEXT: On plus side LOOK AT THE SKY LAST NIGHT IT WAS ABLAZE.
+DISASTER: 0.
+TEXT: Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all.
+DISASTER:1.
+TEXT: I'm on top of the hill and I can see a fire in the woods...
+DISASTER: 1
+TEXT: Jays rocking #MLB @JoeyBats19 just bombed one out of Rogers Centre. Play-offs r ahead for The #BlueJays - Bell Moseby and Barfield r back!
+DISASTER: 0
+TEXT: {query}
+DISASTER: 
 ```
-  
+
+### Basic classification prompt without few shot learning:
+```
+You are a tweet analyst in order to monitor possible emergencies is posted online like accidents (car accidents, airplane accidents, train wrecks or any type of accident),
+natural disasters (for example: earthquakes, typhoon, tsunamis, storm damage, fire...etc), crimes (like homicides, killings, bombing, terrorism, casualties),
+war, scandals....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening.
+ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster or emergency) OR 0 (if not)!!!!!.
+DO NOT ANSWER WITH MORE THAN ONE INT VALUE!!!!
+TEXT: {query}
+YOUR RESPONSE:
+```
+
 ## Initial test results over ~10% validation set (from the training set)
 | Experiment    | F1-Score | Precission | Recall
 | ------------- | ------------- | ------------- | -------------
