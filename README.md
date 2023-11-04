@@ -8,6 +8,11 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 - Make an ensemble of methods for improving results.
 - Apply data augmentation to text with NLPAug. :white_check_mark:
 
+## ChatGPT Prompts
+### Initial few shot learning prompt:
+```
+You are a tweet analyst in order to monitor possible emergencies is posted online like fire, car or airplane accidents, earthquakes, tsunamis, homicides, bombing,    war, storm damage....etc.  It’s not always clear whether a tweet´s words are actually referring to a disaster that happened or is happening. ANSWER ONLY WITH ONE INT VALUE: 1 (if the tweet speaks about a disaster) OR 0 (if not)!!!!!. DO NOT ANSWER WITH MORE THAN ONE INT VALUE!!!!   TEXT: On plus side LOOK AT THE SKY LAST NIGHT IT WAS ABLAZE.   DISASTER: 0.   TEXT: Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all.   DISASTER:1.   TEXT: I'm on top of the hill and I can see a fire in the woods...   DISASTER: 1   TEXT: Jays rocking #MLB @JoeyBats19 just bombed one out of Rogers Centre. Play-offs r ahead for The #BlueJays - Bell Moseby and Barfield r back! DISASTER: 0   TEXT: {query}   DISASTER: 
+```
   
 ## Results over ~10% validation set (from the training set)
 | Experiment    | F1-Score | Precission | Recall
@@ -33,6 +38,7 @@ Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 | Pretrained Bert cased + SMOTE + Data augmentation (NLPAug) + Random Forests | 0.74655 |
 | Pretrained Bert + extra keywords features | 0.77719 |
 | Pretrained Bert + extra keywords features + MLP | 0.78761 | 
+| Initial few shot learning prompt Chat GPT | 0.74624 |
 
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
