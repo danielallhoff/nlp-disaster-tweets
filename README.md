@@ -68,6 +68,7 @@ YOUR RESPONSE:
 | Basic classification prompt Chat GPT | 0.76463 |
 | Finetuned BERT | 0.82653 |
 | Finetuned BERT + extra keywords features (append text at the end) | 0.82286 |
+| Finetuned BERT + extra keywords features (append text at the end) + Random Dropout | 0.8296 |
 
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
