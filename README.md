@@ -5,12 +5,11 @@ This is a repository for the Kaggle Challenge in "Natural Language Processing wi
 Challenge link: https://www.kaggle.com/competitions/nlp-getting-started/data
 
 ## Experiment ideas
-- Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt)
+- Use a LLM as ChatGPT for NLP classification with specific prompts (e.g: few shot learning prompt). :white_check_mark:
 - Use multiple features (not only the tweets text) as the keyword or the location of the tweet. Encode the keyword and the text separately and train a MLP. Dropout one or none of the two inputs (keyword and text) randomly. :white_check_mark:
-- Make an ensemble of methods for improving results.
 - Apply data augmentation to text with NLPAug. :white_check_mark:
+- Make an ensemble of methods for improving results.
 - Experiment with XGBoost.
-- Finetune BERT with multiple features (text and keyword).
 
 ## ChatGPT Prompts
 Its is possible to use ChatGPT as a NLP classifier and work well on this task. Due to performance constrains, its is needed to test the prompts on a small validation set for making a final validation on the full testing set. Some prompts have been tested on the whole testing set. However, as stated, it is not feasible for testing multiple prompts.
