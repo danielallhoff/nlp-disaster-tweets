@@ -73,7 +73,7 @@ YOUR RESPONSE:
 
 ## Conclusions
 
-Up the results obtained, the best results in the competition is obtained by finetuning the BERT with the specific challenge dataset. Specifically, adding extra information as the keyword and the location made the best results. This challenge has helped to get an introduction in NLP and test different techniques!
+Up the results obtained to the moment, the best tested method is by finetuning the BERT with the specific challenge dataset. Specifically, adding extra information as the keyword and the location made the best results. This challenge has helped to get an introduction in NLP and test different techniques!
 
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
