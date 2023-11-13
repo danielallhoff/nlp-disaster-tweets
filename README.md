@@ -56,7 +56,7 @@ YOUR RESPONSE:
 | Pretrained Bert + SMOTE + KNNClassifier | 66.56%		| 60.51%	| 73.96%
 | Pretrained Bert + extra keywords features | 69.21%		| 77.91%	| 62.25%
 | Pretrained Bert + extra keywords features + MLP | 72.82%		| 78.86%	| 67.65%
-**IN PROGRESS**
+
 
 ## Kaggle results
 | Experiment    | F1-Score 
@@ -69,6 +69,11 @@ YOUR RESPONSE:
 | Finetuned BERT | 0.82653 |
 | Finetuned BERT + extra keywords features (append text at the end) | 0.82286 |
 | Finetuned BERT + extra keywords features (append text at the end) + Random Dropout | 0.8296 |
+| Finetuned BERT + extra keywords and locations features (append text at the end) + Random Dropout | 0.82991 |
+
+## Conclusions
+
+Up the results obtained, the best results in the competition is obtained by finetuning the BERT with the specific challenge dataset. Specifically, adding extra information as the keyword and the location made the best results. This challenge has helped to get an introduction in NLP and test different techniques!
 
 ## Links
 - Torch transformers: https://pytorch.org/hub/huggingface_pytorch-transformers/
